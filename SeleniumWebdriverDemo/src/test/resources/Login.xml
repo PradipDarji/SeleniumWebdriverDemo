@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel test suite" parallel="classes" thread-count="2">
+    <test name="Login Demo">
+
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="url" value="http://thedemosite.co.uk/addauser.php"/>
+
+        <classes>
+
+            <class name="LoginTS.LoginTC">
+                <methods>
+                    <include name="loginSuccessfully"></include>
+                    <include name="verifyLoginSuccessfullyMsg"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

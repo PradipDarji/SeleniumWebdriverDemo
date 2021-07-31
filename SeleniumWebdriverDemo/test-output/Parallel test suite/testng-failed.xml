@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Parallel test suite]" parallel="classes">
+  <test thread-count="2" name="Login Demo(failed)" parallel="classes">
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="url" value="http://thedemosite.co.uk/addauser.php"/>
+    <classes>
+      <class name="LoginTS.LoginTC">
+        <methods>
+          <include name="verifyLoginSuccessfullyMsg"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- LoginTS.LoginTC -->
+    </classes>
+  </test> <!-- Login Demo(failed) -->
+</suite> <!-- Failed suite [Parallel test suite] -->
